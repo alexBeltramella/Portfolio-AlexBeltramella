@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 
 import ImgZuzuParado from "../../../assets/ZUZU-parado.svg?react";
 
-import "../../../css/aboutMe.css" 
+import "../../../css/AboutMe.css" 
 
 
 export default function AboutMe() {
