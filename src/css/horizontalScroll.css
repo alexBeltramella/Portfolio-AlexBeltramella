@@ -1,0 +1,46 @@
+
+
+.horizontal-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.horizontal-section .panel {
+    height: 100vh;
+    flex: 0 0 100vw;
+    width: 100vw;
+    position: relative;
+    display: flex;
+}
+
+.horizontal-section .horizontal-track {
+    display: flex;
+    height: 100%;
+    width: max-content;
+    will-change: transform;
+    transform: translate3d(0,0,0);
+}
+
+.horizontal-track {
+    display: flex;
+    height: 100%;
+    width: max-content;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.panel {
+    height: 100vh;
+    flex: 0 0 100vw;
+    width: 100vw;
+    display: flex;
+    position: relative;
+}
+
+.panel > * {
+    width: 100%;
+    flex: 1;
+}

@@ -1,0 +1,106 @@
+.hero-layout {
+    width: 100%;
+    display: flex;
+    position: relative;
+    background-color: var(--background-primary);
+    padding-top: 70px;
+}
+
+.hero-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-img {
+    width: 100%;
+    display: flex;
+    position: relative;
+    left: -9%;
+}
+
+.hero-img > img {
+    align-items: start;
+    max-width: 450px;
+    position: absolute;
+    z-index: 25;
+    left: 22%;
+}
+
+.zuzu { 
+    position: relative;
+    z-index: 27;
+    max-width: 80px;
+    top: -10px;
+    left: 45%;
+    pointer-events: none;
+}
+
+.hero-info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 30px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 28;
+    top: 10%;
+    left: 45%;
+}
+
+.hero-info > h1 {
+    font-size: 80px;
+}
+
+.hero-info > h2 {
+    font-family: var(--anek-bangla);
+    font-weight: 400;
+    font-size: 30px;
+
+}
+
+
+/*CIRCULOS */
+
+.circle {
+    width: 100%;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 20;
+}
+
+.circle-1 {
+    background-color: rgba(226, 202, 158, 0.829);
+    width: 250px;
+    height: 250px;
+    left: -5%;
+    top: -3%;
+}
+
+.circle-2 {
+    background-color: rgba(169, 116, 160, 0.822);
+    width: 150px;
+    height: 150px;
+    top: 10%;
+    left: 83%;
+}
+
+.circle-3 {
+    background-color: rgba(226, 202, 158, 0.753);
+    width: 70px;
+    height: 70px;
+    left: 95%;
+    top: 40%;
+    z-index: 21;
+}
+
+.circle-4 {
+    background-color: rgba(133, 39, 55, 0.781);
+    width: 364px;
+    height: 364px;
+    left: 85%;
+    top: 45%;
+}

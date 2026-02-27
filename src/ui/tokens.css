@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+:root {
+    /*BACKGROUND*/
+    --background-primary: rgba(53, 97, 158, 1);
+
+    /*COLOR BEIGE*/
+    --color-beige: rgba(226, 202, 158, 1);
+
+    /*TEXT COLOR*/
+    --color-text-primary: #ffff;
+
+    /*FONTS*/
+    --text-1: "Inter", sans-serif;
+    --text-2: "Anek Bangla", sans-serif;
+}

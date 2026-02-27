@@ -1,0 +1,58 @@
+
+
+.aboutMe-layout {
+    width: 100%;
+    background-color: var(--background-primary);
+    padding-top: 80px;
+}
+
+.aboutMe-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+}
+
+.aboutMe-info {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 700px;
+    top: 50%;
+    left: 15%;
+}
+
+.aboutMe-info > h2 {
+    font-size: 65px;
+}
+
+.aboutMe-info > p {
+    font-family: var(--text-2);
+    font-size: 20px;
+    background-color: rgb(49, 63, 109);
+    padding: 15px;
+    border-radius: 50px;
+    border: 5px solid var(--color-beige);
+}
+
+.aboutMe-zuzu {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: -5%;
+}
+
+.zuzu-img {
+    width: 100%;
+    display: relative;
+    top: -10%;
+    left: 0;
+    max-width: 740px;
+}
