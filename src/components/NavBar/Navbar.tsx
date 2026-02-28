@@ -44,7 +44,7 @@ export default function Navbar() {
                     <a href="#">SOBRE MI</a>
                 </div>
                 <div className="navbar-links2">
-                    <a href="#">SKILLS</a>
+                    <a href="#">HABILIDADES</a>
                     <a href="#">PROYECTOS</a>
                 </div>
             </div>
