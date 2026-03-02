@@ -1,10 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: var(--background-primary);
+}
+
 
 
 .horizontal-section {
-    position: relative;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
     height: 100vh;
     overflow: hidden;
-    box-sizing: border-box;
 }
 
 .horizontal-section .panel {
@@ -28,16 +40,17 @@
     height: 100%;
     width: max-content;
     will-change: transform;
-    transform: translateZ(0);
+    transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
 }
 
 .panel {
-    height: 100vh;
+    height: 100vw;
     flex: 0 0 100vw;
-    width: 100vw;
+    width: 100%;
     display: flex;
     position: relative;
+    overflow: hidden;
 }
 
 .panel > * {

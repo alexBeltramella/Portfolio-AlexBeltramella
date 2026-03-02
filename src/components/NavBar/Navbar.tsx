@@ -6,6 +6,12 @@ import "../../css/navbar.css";
 export default function Navbar() {
 
     const navbarRef = useRef<HTMLDivElement>(null);
+        const go = (e: React.MouseEvent<HTMLAnchorElement>, index: number) => {
+        e.preventDefault();
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const fn = (window as any).goToPanel as undefined | ((i: number) => void);
+        if (fn) fn(index);
+        };
 
     useLayoutEffect(() => {
         if(!navbarRef.current) return;
@@ -32,6 +38,8 @@ export default function Navbar() {
 
 
         }, navbarRef)
+
+
         return () => ctx.revert();
     }, [])
 
@@ -39,14 +47,15 @@ export default function Navbar() {
     return (
         <div ref={navbarRef} className="navbar-layout">
             <div  className="navbar-container">
-                <div className="navbar-links1">
-                    <a href="#">INICIO</a>
-                    <a href="#">SOBRE MI</a>
-                </div>
-                <div className="navbar-links2">
-                    <a href="#">HABILIDADES</a>
-                    <a href="#">PROYECTOS</a>
-                </div>
+            <div className="navbar-links1">
+                <a href="#" onClick={(e) => go(e, 0)}>INICIO</a>
+                <a href="#" onClick={(e) => go(e, 1)}>SOBRE MI</a>
+            </div>
+
+            <div className="navbar-links2">
+                <a href="#" onClick={(e) => go(e, 2)}>HABILIDADES</a>
+                <a href="#" onClick={(e) => go(e, 3)}>PROYECTOS</a>
+            </div>
             </div>
         </div>
     )
