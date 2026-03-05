@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 import { useLayoutEffect, useRef } from "react";
 import { PROYECTOS, type Proyecto } from "../../../data/proyectos";
+import imgViaggio from "../../../assets/viaggio-project.png"
 
 import "../../../css/proyectos.css";
 
@@ -22,15 +23,26 @@ export default function Proyectos() {
                     gsap.to(c, {
                         width: 360,
                         duration: 0.3,
-                        ease: "power2.out"
-                    });
+                        ease: "power2.out",
+                    })
+                    gsap.fromTo(".img-viaggio", {
+                        width: 150,
+                        ease: "power2.in",
+                        opacity: 0
+                    },{
+                        width: 360,
+                        duration: 0.3,
+                        ease: "power2.out",
+                        opacity: 1
+                    })
                 } else {
                     gsap.to(c, {
                         width: 150,
                         duration: 0.3,
                         ease: "power2.out"
-                    });
+                    })
                 }
+
             });
 
             });
@@ -39,13 +51,21 @@ export default function Proyectos() {
                 gsap.to(cards, {
                     width: 200,
                     duration: 0.3,
-                    ease: "power2.out"
-                });
+                    ease: "power2.out",
+                })
+                gsap.to(".img-viaggio", {
+                    width: 180,
+                    duration: 0.3,
+                    ease: "power2.out",
+                    opacity: 0
+                })
+
             });
         });
 
         const ctx = gsap.context(() => {
-
+            gsap.set(".img-viaggio", {opacity: 0})
+            gsap.set(".img-container", {y:160})
         }, proyectosRef);
         return () => ctx.revert();
     }, [])
@@ -71,6 +91,9 @@ export default function Proyectos() {
                                         </span>
                                     ))}
                                 </div>
+                                {/* <div className="img-container">
+                                    <img className="img-viaggio" src={imgViaggio} alt="" />
+                                </div> */}
                             </div>
                         ))}
                     </div>

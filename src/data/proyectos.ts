@@ -4,6 +4,7 @@ export type Proyecto = {
     role: string,
     stack: string[],
     description: string,
+
     highlights: string[],
     links?: { label: string, href: string}[];
 }

@@ -37,11 +37,25 @@ export default function Hero() {
                 delay: 0.8,
                 duration: 0.5,
             })
-            .from(".circle1-zuzu, .circle2-zuzu, .circle-info-zuzu", {
+            .from(".circle1-zuzu", {
                 scale: 0,
                 opacity: 0.5,
-                ease: "power1.out"
+                ease: "power1.out",
+                duration: 0.1,
             })
+            .from(".circle2-zuzu", {
+                scale: 0,
+                opacity: 0.5,
+                ease: "power1.out",
+                duration: 0.3
+            })
+            .from(".circle-info-zuzu", {
+                scale: 0,
+                opacity: 0.5,
+                ease: "bounce.out",
+                duration: 0.5
+            })
+
             .to(".hero-info", {
                 x: 100,
                 opacity: 1,

@@ -112,10 +112,23 @@
 .card-tech {
     font-size: 12px;
     padding: 6px 10px;
-
     border-radius: 999px;
-
     border: 1px solid rgba(255,255,255,0.14);
-
     opacity: 0.9;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.img-container > img {
+    object-fit: cover cover;
+    width: 200px;
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    transform-origin: left center;
+    border-radius: 0px 0px 10px 10px;
 }
