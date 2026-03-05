@@ -1,5 +1,5 @@
 // src/components/HorizontalScroll.tsx
-import { useLayoutEffect, useRef, useState, useCallback } from "react";
+import { useLayoutEffect, useRef, useState} from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
@@ -24,25 +24,6 @@ export default function HorizontalScroll() {
   // Si querés, podés habilitar/deshabilitar el bloqueo desde un estado/ref
   const lockScrollRef = useRef(true);
 
-  const goToPanel = useCallback((panelIndex: number) => {
-    const st = stRef.current;
-    const panelsCount = panelsCountRef.current;
-
-    if (!st || panelsCount <= 1) return;
-
-    const max = panelsCount - 1;
-    const i = Math.max(0, Math.min(panelIndex, max));
-    const progress = max === 0 ? 0 : i / max;
-
-    const y = st.start + (st.end - st.start) * progress;
-
-    gsap.to(window, {
-      scrollTo: y,
-      duration: 0.8,
-      ease: "power2.out",
-      overwrite: "auto",
-    });
-  }, []);
 
   useLayoutEffect(() => {
     if (!sectionRef.current) return;
