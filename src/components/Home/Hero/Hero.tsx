@@ -37,12 +37,16 @@ export default function Hero() {
                 delay: 0.8,
                 duration: 0.5,
             })
+            .from(".circle1-zuzu, .circle2-zuzu, .circle-info-zuzu", {
+                scale: 0,
+                opacity: 0.5,
+                ease: "power1.out"
+            })
             .to(".hero-info", {
                 x: 100,
-                delay: 0.2,
-                duration: 0.5,
                 opacity: 1,
-                ease: "power1.out",
+                filter: "blur(0px)",
+                duration: 1
             })
             .to(".circle", {
                 x: 0,
@@ -110,6 +114,12 @@ export default function Hero() {
                     <h1>ALEX <br /> BELTRAMELLA</h1>
                     <h2>DESARROLLADOR  WEB  FRONTEND</h2>
                 </div>
+            </div>
+
+            <div className="circle1-zuzu"></div>
+            <div className="circle2-zuzu"></div>
+            <div className="circle-info-zuzu">
+                Hola! Soy Zuzu
             </div>
         </div>
     )

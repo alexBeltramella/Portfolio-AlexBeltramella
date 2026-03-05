@@ -4,6 +4,7 @@
     position: relative;
     background-color: var(--background-primary);
     padding-top: 50px;
+    overflow: hidden;
 }
 
 .hero-container {
@@ -103,4 +104,44 @@
     height: 364px;
     left: 85%;
     top: 45%;
+}
+
+.circle1-zuzu {
+    position: absolute;
+    background-color: var(--color-beige);
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    top: 42%;
+    left: 41%;
+    z-index: 101;
+}
+
+.circle2-zuzu {
+    position: absolute;
+    background-color: var(--color-beige);
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    top: 40%;
+    left: 41.5%;
+    z-index: 101;
+}
+
+.circle-info-zuzu {
+    position: absolute;
+    background-color: var(--color-beige);
+    width: 80px;
+    height: 50px;
+    border-radius: 15px;
+    top: 34.5%;
+    left: 42%;
+    z-index: 101;
+    font-size: 15px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    color: #27526e;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }

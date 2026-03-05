@@ -8,6 +8,7 @@ import "../css/horizontalScroll.css";
 import Home from "./Home/Home";
 import AboutMe from "./Home/SobreMi/aboutMe";
 import Habilidades from "./Home/Habilidades/Habilidades";
+import Proyectos from "./Home/Proyectos/Proyectos";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -192,12 +193,9 @@ export default function HorizontalScroll() {
           </div>
 
           <div className="panel">
-            <Habilidades />
+            <Proyectos />
           </div>
 
-          <div className="panel">
-            <Habilidades />
-          </div>
         </div>
       </section>
     </>
