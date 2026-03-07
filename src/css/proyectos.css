@@ -16,28 +16,18 @@
 .card-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.card {
-    background-color: rgba(104, 104, 148, 0.548);
-    width: 200px;
-    height: 520px;
-}
-
-.title > h2 {
-    font-size: 80px;
-}
-
-.card-container {
-    display: flex;
+    align-items: stretch;
     gap: 30px;
 }
 
 /* CARD */
 
 .card {
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 auto;
+    z-index: 1;
+
     width: 200px;
     min-height: 520px;
 
@@ -57,8 +47,40 @@
     text-align: left;
 
     transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
-
     transform-origin: left center;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: -40%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        circle at top left,
+        rgba(255,255,255,0.35),
+        rgba(255,255,255,0.1) 25%,
+        transparent 60%
+    );
+    pointer-events: none;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -40%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.12),
+        transparent
+    );
+    transform: rotate(10deg);
+    pointer-events: none;
 }
 
 .card:hover {
@@ -67,6 +89,10 @@
     background: rgba(255,255,255,0.10);
 }
 
+.card-info {
+    position: relative;
+    z-index: 2;
+}
 
 /* TITULO */
 
@@ -76,7 +102,6 @@
     font-weight: 600;
 }
 
-
 /* ROL */
 
 .card-role {
@@ -84,7 +109,6 @@
     opacity: 0.8;
     font-size: 14px;
 }
-
 
 /* DESCRIPCION */
 
@@ -95,40 +119,91 @@
     opacity: 0.9;
 }
 
-
 /* STACK */
 
 .card-stack {
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-
-    margin-top: auto;
+    margin-top: 4px;
 }
-
 
 /* TECH TAG */
 
 .card-tech {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
     font-size: 12px;
     padding: 6px 10px;
     border-radius: 999px;
+
     border: 1px solid rgba(255,255,255,0.14);
     opacity: 0.9;
+    background: rgba(255,255,255,0.03);
 }
 
+.tech-icon {
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.card-bottom {
+    position: relative;
+    z-index: 2;
+    margin-top: 12px;
+    min-height: 38px;
+}
+
+.card-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+
+    padding: 0.7em 1.7em;    
+    border-radius: 50px;
+
+    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.10);
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+
+    
+}
+
+
+
 .img-container {
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
+    padding-top: 22px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding-top: 40px;
+    align-items: end;
 }
 
 .img-container > img {
-    object-fit: cover cover;
-    width: 200px;
-    transform: translateY(-6px);
+    width: calc(100% + 26px);
+    max-width: none;
+    margin-left: -13px;
+    margin-right: -13px;
+    display: block;
+    object-fit: cover;
+    border-radius: 0 0 14px 14px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-    transform-origin: left center;
-    border-radius: 0px 0px 10px 10px;
+}
+
+.title > h2 {
+    font-size: 80px;
+    line-height: 1.2;
 }
