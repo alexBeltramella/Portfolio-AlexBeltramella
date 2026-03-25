@@ -1,17 +1,25 @@
 import { gsap } from "gsap";
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 
 import "../../css/navbar.css";
 
 export default function Navbar() {
 
     const navbarRef = useRef<HTMLDivElement>(null);
-        const go = (e: React.MouseEvent<HTMLAnchorElement>, index: number) => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const go = (e: React.MouseEvent<HTMLAnchorElement>, index: number) => {
         e.preventDefault();
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const fn = (window as any).goToPanel as undefined | ((i: number) => void);
-        if (fn) fn(index);
-        };
+        if (fn) {
+            fn(index);
+        } else {
+            const panels = document.querySelectorAll<HTMLElement>(".horizontal-section .panel");
+            panels[index]?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+        setMenuOpen(false);
+    };
 
     useLayoutEffect(() => {
         if(!navbarRef.current) return;
@@ -46,7 +54,19 @@ export default function Navbar() {
 
     return (
         <div ref={navbarRef} className="navbar-layout">
-            <div  className="navbar-container">
+            <button
+                type="button"
+                className={`navbar-toggle ${menuOpen ? "is-open" : ""}`}
+                aria-label={menuOpen ? "Cerrar menu" : "Abrir menu"}
+                aria-expanded={menuOpen}
+                onClick={() => setMenuOpen((prev) => !prev)}
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div className={`navbar-container ${menuOpen ? "is-open" : ""}`}>
             <div className="navbar-links1">
                 <a href="#" onClick={(e) => go(e, 0)}>INICIO</a>
                 <a href="#" onClick={(e) => go(e, 1)}>SOBRE MI</a>

@@ -152,3 +152,119 @@
     color: #fff;
     box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-layout {
+        padding-top: 44px;
+    }
+
+    .hero-img {
+        left: -5%;
+    }
+
+    .hero-img > img {
+        max-width: 360px;
+        left: 18%;
+    }
+
+    .hero-info {
+        top: 14%;
+        left: 50%;
+        gap: 18px;
+    }
+
+    .hero-info > h1 {
+        font-size: 62px;
+        line-height: 0.95;
+    }
+
+    .hero-info > h2 {
+        font-size: 24px;
+    }
+
+    .zuzu {
+        max-width: 66px;
+        top: -8px;
+        left: 44%;
+    }
+
+    .circle-info-zuzu {
+        top: 36%;
+        left: 41%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-layout {
+        min-height: 100dvh;
+        padding: 100px 20px 24px;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 18px;
+    }
+
+    .hero-info {
+        order: -1;
+        position: relative;
+        top: -40px;
+        left: -100px;
+        width: 100%;
+        align-items: center;
+        text-align: start;
+        gap: 16px;
+    }
+
+    .hero-info > h1 {
+        font-size: clamp(38px, 12vw, 54px);
+        left: -100px;
+        line-height: 0.95;
+    }
+
+    .hero-info > h2 {
+        font-size: clamp(16px, 4.2vw, 22px);
+    }
+
+    .hero-img {
+        left: 0;
+        top: -20%;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 320px;
+    }
+
+    .hero-img > img {
+        position: relative;
+        left: auto;
+        width: min(70vw, 300px);
+        max-width: none;
+    }
+
+    .zuzu {
+        position: absolute;
+        top: -35%;
+        left: 64%;
+        max-width: 50px;
+    }
+
+    .circle1-zuzu {
+        top: 51%;
+        left: 71%;
+    }
+
+    .circle2-zuzu {
+        top: 49%;
+        left: 73%;
+    }
+
+    .circle-info-zuzu{
+        top: 42%;
+        left: 75%;
+        width: 70px;
+        height: 50px;
+        font-size: 11px;
+    }
+}

@@ -71,3 +71,36 @@
     font-size: 85px;
     padding: 70px;
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hab-layout {
+        padding-top: 40px;
+    }
+
+    .hab-1 {
+        gap: 90px;
+    }
+
+    .hab-2 {
+        gap: 20px;
+    }
+
+    .hab-3 {
+        gap: 100px;
+    }
+
+    .hab > span {
+        font-size: 34px;
+    }
+
+    .hab-semiCircle1,
+    .hab-semiCircle2 {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hab-title > h2 {
+        font-size: 62px;
+        padding: 44px;
+    }
+}

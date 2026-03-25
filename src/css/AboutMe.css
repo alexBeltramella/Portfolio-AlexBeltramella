@@ -60,3 +60,28 @@
     left: 0;
     max-width: 740px;
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .aboutMe-container {
+        padding: 70px 40px;
+    }
+
+    .aboutMe-info {
+        left: 9%;
+        max-width: 520px;
+        gap: 26px;
+    }
+
+    .aboutMe-info > h2 {
+        font-size: 52px;
+    }
+
+    .aboutMe-info > p {
+        font-size: 18px;
+        border-width: 3px;
+    }
+
+    .zuzu-img {
+        max-width: 620px;
+    }
+}

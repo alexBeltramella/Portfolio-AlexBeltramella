@@ -16,6 +16,7 @@ export default function HorizontalScroll() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const [containerAnim, setContainerAnim] = useState<gsap.core.Animation | null>(null);
+  const [isMobile, setIsMobile] = useState(() => window.matchMedia("(max-width: 768px)").matches);
 
   // Guardamos el ScrollTrigger para poder “ir a panel”
   const stRef = useRef<ScrollTrigger | null>(null);
@@ -24,15 +25,31 @@ export default function HorizontalScroll() {
   // Si querés, podés habilitar/deshabilitar el bloqueo desde un estado/ref
   const lockScrollRef = useRef(true);
 
+  useLayoutEffect(() => {
+    const media = window.matchMedia("(max-width: 768px)");
+    const updateViewportMode = () => setIsMobile(media.matches);
+
+    updateViewportMode();
+    media.addEventListener("change", updateViewportMode);
+
+    return () => media.removeEventListener("change", updateViewportMode);
+  }, []);
+
 
   useLayoutEffect(() => {
     if (!sectionRef.current) return;
+    if (isMobile) {
+      setContainerAnim(null);
+      return;
+    }
 
     const prevHtmlOverflow = document.documentElement.style.overflow;
     const prevBodyOverflow = document.body.style.overflow;
+    const prevBodyPaddingRight = document.body.style.paddingRight;
 
     document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
+    document.body.style.paddingRight = "0px";
 
     const ctx = gsap.context(() => {
       const track = sectionRef.current!.querySelector(".horizontal-track") as HTMLElement;
@@ -151,10 +168,11 @@ export default function HorizontalScroll() {
       ctx.revert();
       document.documentElement.style.overflow = prevHtmlOverflow;
       document.body.style.overflow = prevBodyOverflow;
+      document.body.style.paddingRight = prevBodyPaddingRight;
 
     };
     
-  }, []);
+  }, [isMobile]);
 
   return (
     <>

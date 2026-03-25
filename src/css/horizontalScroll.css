@@ -57,3 +57,31 @@ html, body {
     width: 100%;
     flex: 1;
 }
+
+@media (max-width: 768px) {
+    .horizontal-section {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+
+    .horizontal-section .horizontal-track,
+    .horizontal-track {
+        display: block;
+        width: 100%;
+        height: auto;
+        transform: none !important;
+        will-change: auto;
+    }
+
+    .horizontal-section .panel,
+    .panel {
+        width: 100%;
+        flex: 0 0 auto;
+        height: auto;
+        min-height: 100dvh;
+        overflow: visible;
+    }
+}
