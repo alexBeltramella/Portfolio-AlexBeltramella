@@ -204,7 +204,7 @@
 @media (max-width: 640px) {
     .hero-layout {
         --hero-info-top: 2%;
-        --hero-info-left: -24%;
+        --hero-info-left: -28%;
         --hero-img-size: min(85vw, 320px);
         --hero-figure-offset-x: 0%;
         --hero-zuzu-size: 50px;
@@ -243,13 +243,14 @@
         order: -1;
         position: relative;
         width: 100%;
+        justify-content: center;
         align-items: center;
         text-align: center;
         gap: 8px;
     }
 
     .hero-info > h1 {
-        font-size: clamp(48px, 11vw, 48px);
+        font-size: clamp(44px, 11vw, 48px);
     }
 
     .hero-info > h2 {
