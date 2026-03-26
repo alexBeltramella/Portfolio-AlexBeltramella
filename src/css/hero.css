@@ -213,10 +213,10 @@
         --hero-bubble-font-size: 10px;
         --hero-bubble-x: 95%;
         --hero-bubble-y: 39%;
-
-
+        min-height: 100svh;
         min-height: 100dvh;
-        padding: 90px 18px 24px;
+        height: auto;
+        padding: calc(90px + env(safe-area-inset-top)) max(18px, env(safe-area-inset-right)) calc(24px + env(safe-area-inset-bottom)) max(18px, env(safe-area-inset-left));
     }
 
     .circle1-zuzu {

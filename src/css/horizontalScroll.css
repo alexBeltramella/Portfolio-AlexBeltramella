@@ -75,11 +75,13 @@ html, body {
         will-change: auto;
     }
 
-    .horizontal-section,
-    .panel{
+    .horizontal-section .panel,
+    .panel {
         width: 100%;
         flex: 0 0 auto;
-        height: 100%;
+        height: auto;
+        min-height: 100svh;
+        min-height: 100dvh;
         overflow: visible;
     }
 }

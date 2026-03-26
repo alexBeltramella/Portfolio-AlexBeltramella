@@ -252,7 +252,10 @@
 
 @media (max-width: 640px) {
     .proyectos-layout {
-        padding: 20px 16px 28px;
+        min-height: 100svh;
+        min-height: 100dvh;
+        height: auto;
+        padding: calc(20px + env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) calc(28px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
         align-items: flex-start;
     }
 

@@ -84,11 +84,14 @@
 
 @media (max-width: 640px) {
     .aboutMe-layout {
-        padding-top: 26px;
+        min-height: 100svh;
+        min-height: 100dvh;
+        height: auto;
+        padding: 26px max(18px, env(safe-area-inset-right)) 0 max(18px, env(safe-area-inset-left));
     }
 
     .aboutMe-container {
-        padding: 0 18px 20px;
+        padding: 0 0 20px;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
