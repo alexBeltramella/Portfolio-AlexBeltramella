@@ -96,11 +96,14 @@
     }
 
     .aboutMe-info {
+        padding: 32px 16px;
         position: relative;
         top: auto;
         left: auto;
         max-width: 100%;
         gap: 16px;
+        justify-content: center;
+        align-items: center;
     }
 
     .aboutMe-info > h2 {
@@ -116,11 +119,7 @@
     }
 
     .aboutMe-zuzu {
-        position: relative;
-        top: auto;
-        left: auto;
-        justify-content: center;
-        height: auto;
+        display: none;
     }
 
     .zuzu-img {
