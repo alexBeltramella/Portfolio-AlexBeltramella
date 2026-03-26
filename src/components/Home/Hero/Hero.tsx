@@ -119,21 +119,23 @@ export default function Hero() {
             <div className="circle circle-4"></div>
 
             <div className="hero-container">
-                <div ref={heroRef} className="hero-img">
-                    <img src={imgHeroAlex} alt="" />
-                    <Zuzu className="zuzu"/>
+                <div className="hero-img">
+                    <div className="hero-figure">
+                        <img src={imgHeroAlex} alt="" />
+                        <Zuzu className="zuzu"/>
+
+                        <div className="circle1-zuzu"></div>
+                        <div className="circle2-zuzu"></div>
+                        <div className="circle-info-zuzu">
+                            Hola! Soy Zuzu
+                        </div>
+                    </div>
                 </div>
 
                 <div className="hero-info">
                     <h1>ALEX <br /> BELTRAMELLA</h1>
                     <h2>DESARROLLADOR  WEB  FRONTEND</h2>
                 </div>
-            </div>
-
-            <div className="circle1-zuzu"></div>
-            <div className="circle2-zuzu"></div>
-            <div className="circle-info-zuzu">
-                Hola! Soy Zuzu
             </div>
         </div>
     )
