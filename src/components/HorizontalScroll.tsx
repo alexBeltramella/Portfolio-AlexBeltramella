@@ -16,7 +16,7 @@ export default function HorizontalScroll() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const [containerAnim, setContainerAnim] = useState<gsap.core.Animation | null>(null);
-  const [isMobile, setIsMobile] = useState(() => window.matchMedia("(max-width: 768px)").matches);
+  const [isMobile, setIsMobile] = useState(() => window.matchMedia("(max-width: 640px)").matches);
 
   // Guardamos el ScrollTrigger para poder “ir a panel”
   const stRef = useRef<ScrollTrigger | null>(null);
@@ -26,7 +26,7 @@ export default function HorizontalScroll() {
   const lockScrollRef = useRef(true);
 
   useLayoutEffect(() => {
-    const media = window.matchMedia("(max-width: 768px)");
+    const media = window.matchMedia("(max-width: 640px)");
     const updateViewportMode = () => setIsMobile(media.matches);
 
     updateViewportMode();

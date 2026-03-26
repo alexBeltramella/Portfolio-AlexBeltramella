@@ -58,7 +58,7 @@ html, body {
     flex: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .horizontal-section {
         position: relative;
         inset: auto;
@@ -76,8 +76,8 @@ html, body {
         will-change: auto;
     }
 
-    .horizontal-section .panel,
-    .panel {
+    .horizontal-section,
+    .panel{
         width: 100%;
         flex: 0 0 auto;
         height: auto;

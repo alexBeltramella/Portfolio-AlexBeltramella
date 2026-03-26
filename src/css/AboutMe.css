@@ -61,16 +61,12 @@
     max-width: 740px;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 641px) and (max-width: 1024px) {
     .aboutMe-container {
         padding: 70px 40px;
     }
 
-    .aboutMe-info {
-        left: 9%;
-        max-width: 520px;
-        gap: 26px;
-    }
+    .aboutMe-info { left: 9%; max-width: 520px; gap: 26px; }
 
     .aboutMe-info > h2 {
         font-size: 52px;
@@ -83,5 +79,51 @@
 
     .zuzu-img {
         max-width: 620px;
+    }
+}
+
+@media (max-width: 640px) {
+    .aboutMe-layout {
+        padding-top: 26px;
+    }
+
+    .aboutMe-container {
+        padding: 0 18px 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .aboutMe-info {
+        position: relative;
+        top: auto;
+        left: auto;
+        max-width: 100%;
+        gap: 16px;
+    }
+
+    .aboutMe-info > h2 {
+        font-size: clamp(34px, 10vw, 44px);
+        text-align: center;
+    }
+
+    .aboutMe-info > p {
+        font-size: 16px;
+        padding: 14px;
+        border-width: 2px;
+        border-radius: 18px;
+    }
+
+    .aboutMe-zuzu {
+        position: relative;
+        top: auto;
+        left: auto;
+        justify-content: center;
+        height: auto;
+    }
+
+    .zuzu-img {
+        max-width: min(90vw, 420px);
     }
 }
